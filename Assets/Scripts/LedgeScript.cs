@@ -4,30 +4,14 @@ using UnityEngine;
 
 public class LedgeScript : MonoBehaviour {
 
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerStay(Collider col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.tag == "Player")
         {
-            col.gameObject.GetComponent<CharacterControllerBehaviour>().canClimb = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            col.gameObject.GetComponent<CharacterControllerBehaviour>().canClimb = false;
+            if (Input.GetButtonDown("Interact"))
+            {
+                col.gameObject.GetComponent<CharacterControllerBehaviour>().IsClimbing = true;
+            }
         }
     }
 }

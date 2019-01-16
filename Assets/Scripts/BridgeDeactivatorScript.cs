@@ -8,12 +8,8 @@ public class BridgeDeactivatorScript : MonoBehaviour {
     private GameObject _bridge;
     private bool _destroyBridge=false;
     private bool _startTimer = false;
-    private float _timer;
+    public float _timer;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,9 +19,11 @@ public class BridgeDeactivatorScript : MonoBehaviour {
             _startTimer = true;
         }
 
-        if (_destroyBridge == false)
+        if (_destroyBridge == false && _timer>=1000)
         {
             _bridge.gameObject.SetActive(true);
+            _startTimer = false;
+            _timer = 0;
         }
     }
 
@@ -39,7 +37,7 @@ public class BridgeDeactivatorScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag=="Player")
+        if (col.gameObject.tag=="StabHitBox")
         {
             _destroyBridge = true;
         }
@@ -47,7 +45,7 @@ public class BridgeDeactivatorScript : MonoBehaviour {
 
     private void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "StabHitBox")
         {
             _destroyBridge = false;
         }
