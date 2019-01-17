@@ -19,6 +19,8 @@ public class CharacterControllerBehaviour : MonoBehaviour {
     //stab vars
     private bool _stab;
     [SerializeField] private GameObject _stabHitBox;
+    [SerializeField] private GameObject _sword;
+    private bool _isStabbing;
     //animator vars
     private Animator _animator;
     private int _horizontalVelocityParameter = Animator.StringToHash("HorizontalVelocity");
@@ -29,6 +31,7 @@ public class CharacterControllerBehaviour : MonoBehaviour {
     private bool _startTimer;
     private bool _shoot;
     private Ray _bullet;
+    [SerializeField] private GameObject _gun;
     //basicMovement vars
     [Header("Locomotion Parameters")]
     [SerializeField]
@@ -56,7 +59,6 @@ public class CharacterControllerBehaviour : MonoBehaviour {
 
     void Start () {
         _characterController = GetComponent<CharacterController>();
-
 #if DEBUG
         Assert.IsNotNull(_characterController, "Dependency Error: This component needs a CharachterController to work.");
         Assert.IsNotNull(_absoluteForward, "Dependency Error: Set the Absolute Forward field.");
@@ -83,7 +85,6 @@ public class CharacterControllerBehaviour : MonoBehaviour {
         {
             _shoot = true;
         }
-
         MovementAnimations();
         RotateCamera();
         _animator.SetBool("IsGrounded", _characterController.isGrounded);
@@ -94,6 +95,16 @@ public class CharacterControllerBehaviour : MonoBehaviour {
         if (HasWeapon == true)
         {
             _startTimer = true;
+        }
+
+        if (HasWeapon == true && _isStabbing == false)
+        {
+            _gun.SetActive(true);
+        }
+
+        if (HasWeapon ==false)
+        {
+            _gun.SetActive(false);
         }
 
         if (_timer==1000)
@@ -257,17 +268,29 @@ public class CharacterControllerBehaviour : MonoBehaviour {
         transform.position = new Vector3(transform.position.x + (transform.forward.x), transform.position.y + 1.15f, transform.position.z + (transform.forward.z));
     }
 
+    public void StartStabAnim()
+    {
+        _sword.SetActive(true);
+        _gun.SetActive(false);
+        _isStabbing = true;
+    }
+
     public void Stab()
     {
         _stabHitBox.SetActive(true);
-        //GetComponent<BoxCollider>().enabled = true;
     }
 
     public void StabEnd()
     {
         _stab = false;
         _stabHitBox.SetActive(false);
-        //GetComponent<BoxCollider>().enabled = false;
+    }
+
+    public void EndStabAnim()
+    {
+        _sword.SetActive(false);
+        _gun.SetActive(true);
+        _isStabbing = false;
     }
 
     public void ShootBullet()
