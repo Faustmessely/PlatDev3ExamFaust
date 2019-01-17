@@ -19,11 +19,12 @@ public class BridgeDeactivatorScript : MonoBehaviour {
             _startTimer = true;
         }
 
-        if (_destroyBridge == false && _timer>=1000)
+        if (_timer>=1000)
         {
             _bridge.gameObject.SetActive(true);
             _startTimer = false;
             _timer = 0;
+            _destroyBridge = false;
         }
     }
 
@@ -40,14 +41,6 @@ public class BridgeDeactivatorScript : MonoBehaviour {
         if (col.gameObject.tag=="StabHitBox")
         {
             _destroyBridge = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider col)
-    {
-        if (col.gameObject.tag == "StabHitBox")
-        {
-            _destroyBridge = false;
         }
     }
 }
