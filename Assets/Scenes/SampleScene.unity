@@ -741,6 +741,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114614776616474550, guid: 6e94a58106d64554b8450a4c3f59177b,
+        type: 2}
+      propertyPath: CharacterController
+      value: 
+      objectReference: {fileID: 1920919904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e94a58106d64554b8450a4c3f59177b, type: 2}
   m_IsPrefabAsset: 0
@@ -1378,6 +1383,11 @@ Prefab:
       propertyPath: _characterController
       value: 
       objectReference: {fileID: 1920919907}
+    - target: {fileID: 114614776616474550, guid: 6e94a58106d64554b8450a4c3f59177b,
+        type: 2}
+      propertyPath: CharacterController
+      value: 
+      objectReference: {fileID: 1920919904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e94a58106d64554b8450a4c3f59177b, type: 2}
   m_IsPrefabAsset: 0
@@ -1914,6 +1924,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 114614776616474550, guid: 6e94a58106d64554b8450a4c3f59177b,
+        type: 2}
+      propertyPath: CharacterController
+      value: 
+      objectReference: {fileID: 1920919904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e94a58106d64554b8450a4c3f59177b, type: 2}
   m_IsPrefabAsset: 0
@@ -7465,6 +7480,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114614776616474550, guid: 6e94a58106d64554b8450a4c3f59177b,
+        type: 2}
+      propertyPath: CharacterController
+      value: 
+      objectReference: {fileID: 1920919904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e94a58106d64554b8450a4c3f59177b, type: 2}
   m_IsPrefabAsset: 0
@@ -8605,6 +8625,11 @@ Prefab:
       propertyPath: m_Name
       value: Ledge
       objectReference: {fileID: 0}
+    - target: {fileID: 114614776616474550, guid: 6e94a58106d64554b8450a4c3f59177b,
+        type: 2}
+      propertyPath: CharacterController
+      value: 
+      objectReference: {fileID: 1920919904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e94a58106d64554b8450a4c3f59177b, type: 2}
   m_IsPrefabAsset: 0
@@ -10091,6 +10116,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114614776616474550, guid: 6e94a58106d64554b8450a4c3f59177b,
+        type: 2}
+      propertyPath: CharacterController
+      value: 
+      objectReference: {fileID: 1920919904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e94a58106d64554b8450a4c3f59177b, type: 2}
   m_IsPrefabAsset: 0
@@ -14470,6 +14500,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 114614776616474550, guid: 6e94a58106d64554b8450a4c3f59177b,
+        type: 2}
+      propertyPath: CharacterController
+      value: 
+      objectReference: {fileID: 1920919904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e94a58106d64554b8450a4c3f59177b, type: 2}
   m_IsPrefabAsset: 0
@@ -16577,6 +16612,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 114614776616474550, guid: 6e94a58106d64554b8450a4c3f59177b,
+        type: 2}
+      propertyPath: CharacterController
+      value: 
+      objectReference: {fileID: 1920919904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e94a58106d64554b8450a4c3f59177b, type: 2}
   m_IsPrefabAsset: 0

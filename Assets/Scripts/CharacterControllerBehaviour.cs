@@ -16,6 +16,7 @@ public class CharacterControllerBehaviour : MonoBehaviour {
     //climb vars
     public bool IsClimbing;
     private bool _climb;
+    public GameObject CurrentLedge;
     //stab vars
     private bool _stab;
     [SerializeField] private GameObject _stabHitBox;
@@ -118,6 +119,11 @@ public class CharacterControllerBehaviour : MonoBehaviour {
     {
         ApplyGround();
         ApplyGravity();
+        if (IsClimbing==true)
+        {
+            Vector3 newRot = new Vector3(_characterController.transform.eulerAngles.x, CurrentLedge.transform.eulerAngles.y-90, _characterController.transform.eulerAngles.z);
+            _characterController.transform.rotation = Quaternion.Euler(newRot);
+        }
         if (IsClimbing==false)
         {
             ApplyMovement();
